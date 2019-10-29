@@ -55,7 +55,8 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        #DIRS es una lista de directorios del sistema de archivos utilizada para comprobar cuando se cargan las plantillas de Django; es una ruta de búsqueda.
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
