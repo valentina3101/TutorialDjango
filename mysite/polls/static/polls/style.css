@@ -1,6 +1,14 @@
-li a {
-    color: green;
+h1 {
+    text-align: center ;
 }
-body {
-    background: white url("images/background.gif") no-repeat;
+html {
+    background-color : #ff8000 ;
+}   
+body { 
+    text-align: left ;
+	font: 150% Times New Roman, sans-serif; 
+	line-height:1 ; /**establece la distancia entre lineas de texto**/
+	color: black;
+    margin: 0; 
+	padding: 10;
 }

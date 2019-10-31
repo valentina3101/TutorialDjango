@@ -8,6 +8,7 @@ from django.views import generic
 from django.utils import timezone
 
 
+
 class IndexView(generic.ListView):
     template_name = 'polls/index.html'
     context_object_name = 'latest_question_list'
@@ -41,7 +42,7 @@ def vote(request, question_id):
         # Redisplay the question voting form.
         return render(request, 'polls/detail.html', {
             'question': question,
-            'error_message': "You didn't select a choice.",
+            'error_message': "No a seleccionado ninguna respuesta",
         })
     else:
         selected_choice.votes += 1
@@ -52,5 +53,6 @@ def vote(request, question_id):
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
 
     return HttpResponse(response % question_id)
+
 
 
